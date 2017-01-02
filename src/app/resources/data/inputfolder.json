@@ -1,0 +1,34 @@
+{
+    "data": [
+        {
+            "DataLocationID": 0,
+            "ID": 1,
+            "ScanTrigger": "0\/10 * * * * ?"
+        },
+        {
+            "DataLocationID": 1,
+            "ID": 2,
+            "ScanTrigger": "22 22 12 ? * 3,4,5,6"
+        },
+        {
+            "DataLocationID": 206,
+            "ID": 3,
+            "ScanTrigger": "0\/10 * * * * ?"
+        },
+        {
+            "DataLocationID": 265,
+            "ID": 4,
+            "ScanTrigger": "0\/10 * * * * ?"
+        },
+        {
+            "DataLocationID": 266,
+            "ID": 5,
+            "ScanTrigger": "0\/10 * * * * ?"
+        },
+        {
+            "DataLocationID": 295,
+            "ID": 6,
+            "ScanTrigger": "0\/10 * * * * ?"
+        }
+    ]
+}

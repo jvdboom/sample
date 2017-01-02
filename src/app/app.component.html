@@ -1,3 +1,8 @@
-<h1>
-  {{title}}
-</h1>
+<div id="header">
+  <p-menubar styleClass="MenuLeft" [model]="_items"></p-menubar>
+</div>
+<div id="content">
+  <router-outlet></router-outlet>
+</div>
+
+<!--<p-menubar [model]="_items"></p-menubar>-->

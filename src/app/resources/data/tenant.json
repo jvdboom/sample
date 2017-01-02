@@ -1,0 +1,52 @@
+{
+    "data": [
+        {
+            "ParentID": 0,
+            "CountryCodeID": 150,
+            "Active": true,
+            "CustomerNumber": "Canon001",
+            "ID": 1,
+            "Name": "Canon"
+        },
+        {
+            "ParentID": 0,
+            "CountryCodeID": 150,
+            "Active": true,
+            "CustomerNumber": "Concern001",
+            "ID": 5,
+            "Name": "Concern"
+        },
+        {
+            "ParentID": 5,
+            "CountryCodeID": 150,
+            "Active": false,
+            "CustomerNumber": "companyA001",
+            "ID": 6,
+            "Name": "CompanyA"
+        },
+        {
+            "ParentID": 5,
+            "CountryCodeID": 150,
+            "Active": false,
+            "CustomerNumber": "companyB001",
+            "ID": 7,
+            "Name": "CompanyB"
+        },
+        {
+            "ParentID": 0,
+            "CountryCodeID": 150,
+            "Active": true,
+            "CustomerNumber": "TenantA001",
+            "ID": 8,
+            "Name": "TenantA"
+        },
+        {
+            "ParentID": 0,
+            "CountryCodeID": 81,
+            "Active": true,
+            "CustomerNumber": "REFB",
+            "ID": 25,
+            "Name": "TenantB"
+        }
+    ]
+}

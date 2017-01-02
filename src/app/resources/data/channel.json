@@ -1,0 +1,74 @@
+{
+    "data": [
+        {
+            "TenantID": 1,
+            "DTAPState": "D",
+            "Active": false,
+            "Description": "Description of Inpufolder1",
+            "ChannelTypeID": 1,
+            "ID": 1,
+            "ChannelPropertiesID": 1,
+            "Name": "Inputfolder1"
+        },
+        {
+            "TenantID": 1,
+            "DTAPState": "D",
+            "Active": true,
+            "Description": "Description of Inpufolder2",
+            "ChannelTypeID": 1,
+            "ID": 2,
+            "ChannelPropertiesID": 2,
+            "Name": "Inputfolder2"
+        },
+        {
+            "TenantID": 8,
+            "DTAPState": "D",
+            "Active": true,
+            "Description": "Description of Inpufolder3",
+            "ChannelTypeID": 1,
+            "ID": 3,
+            "ChannelPropertiesID": 3,
+            "Name": "Inputfolder3"
+        },
+        {
+            "TenantID": 1,
+            "DTAPState": "T",
+            "Active": false,
+            "Description": "Description of Inpufolder4",
+            "ChannelTypeID": 1,
+            "ID": 4,
+            "ChannelPropertiesID": 4,
+            "Name": "Inputfolder4"
+        },
+        {
+            "TenantID": 8,
+            "DTAPState": "D",
+            "Active": false,
+            "Description": "Description of Inpufolder5",
+            "ChannelTypeID": 1,
+            "ID": 5,
+            "ChannelPropertiesID": 5,
+            "Name": "Inputfolder5"
+        },
+        {
+            "TenantID": 8,
+            "DTAPState": "D",
+            "Active": false,
+            "Description": "Description of Inpufolder6",
+            "ChannelTypeID": 1,
+            "ID": 6,
+            "ChannelPropertiesID": 6,
+            "Name": "Inputfolder6"
+        },
+        {
+            "TenantID": 31,
+            "DTAPState": "T",
+            "Active": false,
+            "Description": "SimonTest",
+            "ChannelTypeID": 1,
+            "ID": 33,
+            "ChannelPropertiesID": 35,
+            "Name": "Simon"
+        }
+    ]
+}

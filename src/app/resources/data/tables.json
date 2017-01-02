@@ -1,0 +1,366 @@
+{
+    "tables": [
+        {
+            "table": {
+                "catalog": "CCM",
+                "name": "RecogRuleConfig",
+                "schema": "dbo",
+                "type": "BASE TABLE"
+            }
+        },
+        {
+            "table": {
+                "catalog": "CCM",
+                "name": "State",
+                "schema": "dbo",
+                "type": "BASE TABLE"
+            }
+        },
+        {
+            "table": {
+                "catalog": "CCM",
+                "name": "ScenarioStep",
+                "schema": "dbo",
+                "type": "BASE TABLE"
+            }
+        },
+        {
+            "table": {
+                "catalog": "CCM",
+                "name": "FileType",
+                "schema": "dbo",
+                "type": "BASE TABLE"
+            }
+        },
+        {
+            "table": {
+                "catalog": "CCM",
+                "name": "CountryCode",
+                "schema": "dbo",
+                "type": "BASE TABLE"
+            }
+        },
+        {
+            "table": {
+                "catalog": "CCM",
+                "name": "ProcessConfiguration",
+                "schema": "dbo",
+                "type": "BASE TABLE"
+            }
+        },
+        {
+            "table": {
+                "catalog": "CCM",
+                "name": "RecogRuleVersion",
+                "schema": "dbo",
+                "type": "BASE TABLE"
+            }
+        },
+        {
+            "table": {
+                "catalog": "CCM",
+                "name": "DataLocation",
+                "schema": "dbo",
+                "type": "BASE TABLE"
+            }
+        },
+        {
+            "table": {
+                "catalog": "CCM",
+                "name": "ProcessParameterDefinition",
+                "schema": "dbo",
+                "type": "BASE TABLE"
+            }
+        },
+        {
+            "table": {
+                "catalog": "CCM",
+                "name": "InputFolder",
+                "schema": "dbo",
+                "type": "BASE TABLE"
+            }
+        },
+        {
+            "table": {
+                "catalog": "CCM",
+                "name": "RecogRule",
+                "schema": "dbo",
+                "type": "BASE TABLE"
+            }
+        },
+        {
+            "table": {
+                "catalog": "CCM",
+                "name": "RequestStatus",
+                "schema": "dbo",
+                "type": "BASE TABLE"
+            }
+        },
+        {
+            "table": {
+                "catalog": "CCM",
+                "name": "Tenant",
+                "schema": "dbo",
+                "type": "BASE TABLE"
+            }
+        },
+        {
+            "table": {
+                "catalog": "CCM",
+                "name": "Process",
+                "schema": "dbo",
+                "type": "BASE TABLE"
+            }
+        },
+        {
+            "table": {
+                "catalog": "CCM",
+                "name": "Property",
+                "schema": "dbo",
+                "type": "BASE TABLE"
+            }
+        },
+        {
+            "table": {
+                "catalog": "CCM",
+                "name": "MessageType",
+                "schema": "dbo",
+                "type": "BASE TABLE"
+            }
+        },
+        {
+            "table": {
+                "catalog": "CCM",
+                "name": "TenantPropertyValue",
+                "schema": "dbo",
+                "type": "BASE TABLE"
+            }
+        },
+        {
+            "table": {
+                "catalog": "CCM",
+                "name": "DocumentType",
+                "schema": "dbo",
+                "type": "BASE TABLE"
+            }
+        },
+        {
+            "table": {
+                "catalog": "CCM",
+                "name": "ProcessStatus",
+                "schema": "dbo",
+                "type": "BASE TABLE"
+            }
+        },
+        {
+            "table": {
+                "catalog": "CCM",
+                "name": "Message",
+                "schema": "dbo",
+                "type": "BASE TABLE"
+            }
+        },
+        {
+            "table": {
+                "catalog": "CCM",
+                "name": "ChannelType",
+                "schema": "dbo",
+                "type": "BASE TABLE"
+            }
+        },
+        {
+            "table": {
+                "catalog": "CCM",
+                "name": "MessageStatus",
+                "schema": "dbo",
+                "type": "BASE TABLE"
+            }
+        },
+        {
+            "table": {
+                "catalog": "CCM",
+                "name": "ProcessLoop",
+                "schema": "dbo",
+                "type": "BASE TABLE"
+            }
+        },
+        {
+            "table": {
+                "catalog": "CCM",
+                "name": "sysdiagrams",
+                "schema": "dbo",
+                "type": "BASE TABLE"
+            }
+        },
+        {
+            "table": {
+                "catalog": "CCM",
+                "name": "Document",
+                "schema": "dbo",
+                "type": "BASE TABLE"
+            }
+        },
+        {
+            "table": {
+                "catalog": "CCM",
+                "name": "FileStatus",
+                "schema": "dbo",
+                "type": "BASE TABLE"
+            }
+        },
+        {
+            "table": {
+                "catalog": "CCM",
+                "name": "FilePropertyValue",
+                "schema": "dbo",
+                "type": "BASE TABLE"
+            }
+        },
+        {
+            "table": {
+                "catalog": "CCM",
+                "name": "MessagePropertyValue",
+                "schema": "dbo",
+                "type": "BASE TABLE"
+            }
+        },
+        {
+            "table": {
+                "catalog": "CCM",
+                "name": "PropertyDefinition",
+                "schema": "dbo",
+                "type": "BASE TABLE"
+            }
+        },
+        {
+            "table": {
+                "catalog": "CCM",
+                "name": "Request",
+                "schema": "dbo",
+                "type": "BASE TABLE"
+            }
+        },
+        {
+            "table": {
+                "catalog": "CCM",
+                "name": "ScenarioSequence",
+                "schema": "dbo",
+                "type": "BASE TABLE"
+            }
+        },
+        {
+            "table": {
+                "catalog": "CCM",
+                "name": "Channel",
+                "schema": "dbo",
+                "type": "BASE TABLE"
+            }
+        },
+        {
+            "table": {
+                "catalog": "CCM",
+                "name": "vwRequestDetails001",
+                "schema": "dbo",
+                "type": "VIEW"
+            }
+        },
+        {
+            "table": {
+                "catalog": "CCM",
+                "name": "Scenario",
+                "schema": "dbo",
+                "type": "BASE TABLE"
+            }
+        },
+        {
+            "table": {
+                "catalog": "CCM",
+                "name": "MessageGroup",
+                "schema": "dbo",
+                "type": "BASE TABLE"
+            }
+        },
+        {
+            "table": {
+                "catalog": "CCM",
+                "name": "MessageMessageGroup",
+                "schema": "dbo",
+                "type": "BASE TABLE"
+            }
+        },
+        {
+            "table": {
+                "catalog": "CCM",
+                "name": "ScenarioPointer",
+                "schema": "dbo",
+                "type": "BASE TABLE"
+            }
+        },
+        {
+            "table": {
+                "catalog": "CCM",
+                "name": "ProcessDefinition",
+                "schema": "dbo",
+                "type": "BASE TABLE"
+            }
+        },
+        {
+            "table": {
+                "catalog": "CCM",
+                "name": "RecogRuleConfigView",
+                "schema": "dbo",
+                "type": "VIEW"
+            }
+        },
+        {
+            "table": {
+                "catalog": "CCM",
+                "name": "JobType",
+                "schema": "dbo",
+                "type": "BASE TABLE"
+            }
+        },
+        {
+            "table": {
+                "catalog": "CCM",
+                "name": "ProcessParameterConfiguration",
+                "schema": "dbo",
+                "type": "BASE TABLE"
+            }
+        },
+        {
+            "table": {
+                "catalog": "CCM",
+                "name": "Hero",
+                "schema": "dbo",
+                "type": "BASE TABLE"
+            }
+        },
+        {
+            "table": {
+                "catalog": "CCM",
+                "name": "ScenarioVersion",
+                "schema": "dbo",
+                "type": "BASE TABLE"
+            }
+        },
+        {
+            "table": {
+                "catalog": "CCM",
+                "name": "File",
+                "schema": "dbo",
+                "type": "BASE TABLE"
+            }
+        },
+        {
+            "table": {
+                "catalog": "CCM",
+                "name": "ProcessParameter",
+                "schema": "dbo",
+                "type": "BASE TABLE"
+            }
+        }
+    ]
+}
+
+

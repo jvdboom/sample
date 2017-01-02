@@ -1,0 +1,64 @@
+
+<div class="ui-g">
+    <!-- Master Section -->
+    <div class="ui-g-6">
+        <p-panel header="Database Information" styleClass="panel-content">
+        <div class="ContentSideSections Implementation">
+
+            <div class="ui-g-3">
+                <p-dropdown [options]="_tableItems" [(ngModel)]="selectedTable"></p-dropdown>
+            </div>
+            <div class="ui-g-3">
+                <button pButton type="button" (click)="btnRequest($event)" label="Request"></button>
+            </div>
+            <div class="ui-g-3">
+                <button pButton type="button" (click)="btnGetTables()" label="Tables"></button>
+            </div>
+            <div class="ui-g-3">
+                <button pButton type="button" (click)="update(_dataTable)" label="Reset"></button>
+            </div>
+
+            <p-dataTable #_dataTable [value]="_tables" expandableRows="true" selectionMode="single" 
+            (onRowSelect)="handleRowSelect($event)" 
+            (onRowExpand)="handleRowExpand($event)">
+                <p-column expander="true" styleClass="col-icon" [style]="{'width':'30px'}" (onRowClick)="onRowClick()"></p-column>
+                <p-column field="TABLE_NAME" header="Name" [filter]="true" [sortable]="true"></p-column>
+                <template let-table pTemplate="rowexpansion">
+                    <div class="ui-grid ui-grid-responsive ui-fluid" style="font-size:16px;padding:20px">
+                        <div class="ui-grid-col-1">
+                            <i class="fa fa-search" (click)="getTableInfo(table)" style="cursor:pointer;float:left;margin-top:40px"></i>
+                        </div>
+    <!--</div>-->
+                        <div class="ui-grid-col-11">
+                            <p-panel header="{{table.TABLE_NAME}}" styleClass="panel-content">
+                                <p-dataTable [value]="_columns">
+                                    <p-column field="COLUMN_NAME" header="Name"></p-column>
+                                    <p-column field="IS_NULLABLE" header="Nullable"></p-column>
+                                    <p-column field="DATA_TYPE" header="DataType"></p-column>
+                                    <p-column field="CHARACTER_MAXIMUM_LENGTH" header="MaxLenght"></p-column>
+                                </p-dataTable>
+                            </p-panel>
+                        </div>
+                    </div>
+                </template>
+            </p-dataTable>
+        </div>
+        </p-panel>
+    </div>
+    <div class="ui-g-6 ">
+        <p-panel header="Result" styleClass="panel-content">
+            <div id="content">
+                <div>
+                    <button pButton type="button" class="ui-button-secondary" icon="fa-check" iconPos="left" label="{{title}}"></button>
+                    <button pButton type="button" class="ui-button-success" icon="fa-check" iconPos="left" label="{{title}}"></button>
+                    <button pButton type="button" class="ui-button-info" icon="fa-check" iconPos="left" label="{{title}}"></button>
+                    <button pButton type="button" class="ui-button-warning" icon="fa-check" iconPos="left" label="{{title}}"></button>
+                    <button pButton type="button" class="ui-button-danger" icon="fa-check" iconPos="left" label="{{title}}"></button>
+                </div>
+            </div>
+            <div>
+                <pre>{{_data | json}}</pre>
+            </div>
+        </p-panel>
+    </div>
+</div>

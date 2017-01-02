@@ -1,0 +1,32 @@
+{
+    "data": [
+        {
+            "MessageRepeatingElement": null,
+            "TenantID": 0,
+            "Description": "Description of Invoices",
+            "ID": 1,
+            "Name": "Invoices"
+        },
+        {
+            "MessageRepeatingElement": null,
+            "TenantID": 0,
+            "Description": "RobinDescription",
+            "ID": 4,
+            "Name": "robin"
+        },
+        {
+            "MessageRepeatingElement": null,
+            "TenantID": 0,
+            "Description": "Bijlage",
+            "ID": 7,
+            "Name": "Bijlage"
+        },
+        {
+            "MessageRepeatingElement": "1000",
+            "TenantID": 0,
+            "Description": "1000",
+            "ID": 17,
+            "Name": "1000"
+        }
+    ]
+}

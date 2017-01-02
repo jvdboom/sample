@@ -1,0 +1,242 @@
+{
+    "data": [
+        {
+            "DefaultValue": "Layout.wfd",
+            "DTAPstate": "D",
+            "ID": 1,
+            "ProcessDefinitionID": 1,
+            "Name": "wfd"
+        },
+        {
+            "DefaultValue": "-c Layout.job",
+            "DTAPstate": "D",
+            "ID": 2,
+            "ProcessDefinitionID": 1,
+            "Name": "job"
+        },
+        {
+            "DefaultValue": "-printfileParamInput Printfile.ps",
+            "DTAPstate": "D",
+            "ID": 3,
+            "ProcessDefinitionID": 1,
+            "Name": "file"
+        },
+        {
+            "DefaultValue": "-printfolderParamInput c:\\temp",
+            "DTAPstate": "D",
+            "ID": 4,
+            "ProcessDefinitionID": 1,
+            "Name": "folder"
+        },
+        {
+            "DefaultValue": "-l c:\\temp\\inspire.log",
+            "DTAPstate": "D",
+            "ID": 5,
+            "ProcessDefinitionID": 1,
+            "Name": "log"
+        },
+        {
+            "DefaultValue": "{emailto}",
+            "DTAPstate": "D",
+            "ID": 6,
+            "ProcessDefinitionID": 2,
+            "Name": "to"
+        },
+        {
+            "DefaultValue": "{emailfrom}",
+            "DTAPstate": "D",
+            "ID": 7,
+            "ProcessDefinitionID": 2,
+            "Name": "from"
+        },
+        {
+            "DefaultValue": "{emailcc}",
+            "DTAPstate": "D",
+            "ID": 8,
+            "ProcessDefinitionID": 2,
+            "Name": "cc"
+        },
+        {
+            "DefaultValue": "{jobdir}{jobname}",
+            "DTAPstate": "D",
+            "ID": 9,
+            "ProcessDefinitionID": 2,
+            "Name": "body"
+        },
+        {
+            "DefaultValue": "{jobdir}{filename}",
+            "DTAPstate": "D",
+            "ID": 10,
+            "ProcessDefinitionID": 2,
+            "Name": "attachement"
+        },
+        {
+            "DefaultValue": "<WFD Name>",
+            "DTAPstate": "D",
+            "ID": 12,
+            "ProcessDefinitionID": 3,
+            "Name": "WFD"
+        },
+        {
+            "DefaultValue": "<Input module>",
+            "DTAPstate": "D",
+            "ID": 19,
+            "ProcessDefinitionID": 3,
+            "Name": "InputModule"
+        },
+        {
+            "DefaultValue": "<Input file>",
+            "DTAPstate": "D",
+            "ID": 20,
+            "ProcessDefinitionID": 3,
+            "Name": "InputFile"
+        },
+        {
+            "DefaultValue": "<Output Format>",
+            "DTAPstate": "D",
+            "ID": 21,
+            "ProcessDefinitionID": 3,
+            "Name": "OutputFormat"
+        },
+        {
+            "DefaultValue": "<Output file>",
+            "DTAPstate": "D",
+            "ID": 22,
+            "ProcessDefinitionID": 3,
+            "Name": "OutputModule"
+        },
+        {
+            "DefaultValue": "<Output file>",
+            "DTAPstate": "D",
+            "ID": 23,
+            "ProcessDefinitionID": 3,
+            "Name": "OutputFile"
+        },
+        {
+            "DefaultValue": "<Job config>",
+            "DTAPstate": "D",
+            "ID": 24,
+            "ProcessDefinitionID": 3,
+            "Name": "JobConfig"
+        },
+        {
+            "DefaultValue": "ZIP",
+            "DTAPstate": "D",
+            "ID": 25,
+            "ProcessDefinitionID": 4,
+            "Name": "CompressionType"
+        },
+        {
+            "DefaultValue": "<File>",
+            "DTAPstate": "D",
+            "ID": 26,
+            "ProcessDefinitionID": 4,
+            "Name": "File"
+        },
+        {
+            "DefaultValue": null,
+            "DTAPstate": "D",
+            "ID": 27,
+            "ProcessDefinitionID": 4,
+            "Name": "Password"
+        },
+        {
+            "DefaultValue": "N",
+            "DTAPstate": "D",
+            "ID": 28,
+            "ProcessDefinitionID": 4,
+            "Name": "Recursive"
+        },
+        {
+            "DefaultValue": "<Path>",
+            "DTAPstate": "D",
+            "ID": 29,
+            "ProcessDefinitionID": 5,
+            "Name": "SourceLocation"
+        },
+        {
+            "DefaultValue": "<File>",
+            "DTAPstate": "D",
+            "ID": 30,
+            "ProcessDefinitionID": 5,
+            "Name": "SourceFile"
+        },
+        {
+            "DefaultValue": "<Path>",
+            "DTAPstate": "D",
+            "ID": 31,
+            "ProcessDefinitionID": 5,
+            "Name": "DestinationLocation"
+        },
+        {
+            "DefaultValue": "N",
+            "DTAPstate": "D",
+            "ID": 32,
+            "ProcessDefinitionID": 5,
+            "Name": "Recursive"
+        },
+        {
+            "DefaultValue": null,
+            "DTAPstate": "D",
+            "ID": 33,
+            "ProcessDefinitionID": 5,
+            "Name": "UserName"
+        },
+        {
+            "DefaultValue": null,
+            "DTAPstate": "D",
+            "ID": 34,
+            "ProcessDefinitionID": 5,
+            "Name": "PassWord"
+        },
+        {
+            "DefaultValue": null,
+            "DTAPstate": "D",
+            "ID": 35,
+            "ProcessDefinitionID": 6,
+            "Name": "NOTIFICATIONTYPE"
+        },
+        {
+            "DefaultValue": "Notification.wfd",
+            "DTAPstate": "D",
+            "ID": 36,
+            "ProcessDefinitionID": 6,
+            "Name": "NOTIFICATIONTEMPLATE"
+        },
+        {
+            "DefaultValue": null,
+            "DTAPstate": "D",
+            "ID": 37,
+            "ProcessDefinitionID": 6,
+            "Name": "EMAILTO"
+        },
+        {
+            "DefaultValue": null,
+            "DTAPstate": "D",
+            "ID": 38,
+            "ProcessDefinitionID": 6,
+            "Name": "EMAILCC"
+        },
+        {
+            "DefaultValue": "operating-ccs@canon.nl",
+            "DTAPstate": "D",
+            "ID": 39,
+            "ProcessDefinitionID": 6,
+            "Name": "EMAILFROM"
+        },
+        {
+            "DefaultValue": null,
+            "DTAPstate": "D",
+            "ID": 40,
+            "ProcessDefinitionID": 6,
+            "Name": "EMAILSUBJECT"
+        },
+        {
+            "DefaultValue": null,
+            "DTAPstate": "D",
+            "ID": 41,
+            "ProcessDefinitionID": 6,
+            "Name": "EMAILATTACHMENT"
+        }
+    ]
+}

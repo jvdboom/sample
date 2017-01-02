@@ -1,0 +1,64 @@
+{
+    "data": [
+        {
+            "WorkFlowId": "ac1c580c56791f2281567d9455b8000b",
+            "Input": false,
+            "Pre": false,
+            "Post": false,
+            "Output": false,
+            "ID": 1,
+            "System": false,
+            "Name": "CreatePrintFile                                                                                                                                                                                                                                                 "
+        },
+        {
+            "WorkFlowId": "ac1c580c56791f2281567da37c2f000c",
+            "Input": false,
+            "Pre": false,
+            "Post": false,
+            "Output": false,
+            "ID": 2,
+            "System": false,
+            "Name": "Email                                                                                                                                                                                                                                                           "
+        },
+        {
+            "WorkFlowId": null,
+            "Input": false,
+            "Pre": false,
+            "Post": false,
+            "Output": false,
+            "ID": 3,
+            "System": false,
+            "Name": "Inspire                                                                                                                                                                                                                                                         "
+        },
+        {
+            "WorkFlowId": null,
+            "Input": false,
+            "Pre": false,
+            "Post": false,
+            "Output": false,
+            "ID": 4,
+            "System": false,
+            "Name": "Decompress                                                                                                                                                                                                                                                      "
+        },
+        {
+            "WorkFlowId": null,
+            "Input": false,
+            "Pre": false,
+            "Post": false,
+            "Output": false,
+            "ID": 5,
+            "System": false,
+            "Name": "FileCopy                                                                                                                                                                                                                                                        "
+        },
+        {
+            "WorkFlowId": null,
+            "Input": false,
+            "Pre": false,
+            "Post": false,
+            "Output": false,
+            "ID": 6,
+            "System": false,
+            "Name": "Notification                                                                                                                                                                                                                                                    "
+        }
+    ]
+}
