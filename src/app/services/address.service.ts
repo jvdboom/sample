@@ -2,20 +2,19 @@ import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 
 /**Local */
-import { Car } from './../models/car';
-
+import { Address } from './../models/address';
 @Injectable()
-export class CarService {
+export class AddressService {
 
   constructor(private _http: Http) { }
 
-  getCarsAll() {
-
-    return this._http.get('../resources/data/cars-large.json')
+  getAdressessAll() {
+    return this._http.get('../resources/data/address-large.json')
       .toPromise()
-      .then(res => <Car[]>res.json().data)
+      .then(res => <Address[]>res.json().data)
       .then(data => {
         return data;
       });
   }
+
 }

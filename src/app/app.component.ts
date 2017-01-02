@@ -31,5 +31,11 @@ export class AppComponent implements OnInit {
         routerLink: ['car']
       }
     ];
+
+    const items: MenuItem[] = [];
+    items.push({ label: 'Address List', icon: 'fa-bolt', routerLink: ['addresslist'] });
+    items.push({ label: 'Address Form', icon: 'fa-bolt', routerLink: ['addressform'] });
+    this._items.push({ label: 'Address', icon: 'fa-bug', items });
+
   }
 }

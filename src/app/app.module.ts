@@ -15,12 +15,15 @@ import { PanelModule } from 'primeng/primeng';
 import './rxjs-extensions';
 import { RouterModule, Routes } from '@angular/router';
 
+/** Local */
 import { AppComponent } from './app.component';
 import { DatabaseInfoComponent } from './database-info/database-info.component';
 import { CarComponent } from './car/car.component';
 
 import { SqlinfoService } from './services/sqlinfo.service';
 import { CarService } from './services/car.service';
+import { AddressFormComponent } from './address-form/address-form.component';
+import { AddressListComponent } from './address-list/address-list.component';
 
 const routes: Routes = [
   {
@@ -31,6 +34,12 @@ const routes: Routes = [
   },
   {
     path: 'car', component: CarComponent
+  },
+  {
+    path: 'addressform', component: AddressFormComponent
+  },
+  {
+    path: 'addresslist', component: AddressListComponent
   }
   // {
   //     path: 'httprequest', component: HttprequestComponent
@@ -56,7 +65,9 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     DatabaseInfoComponent,
-    CarComponent
+    CarComponent,
+    AddressFormComponent,
+    AddressListComponent
   ],
   imports: [
     BrowserModule, ButtonModule,
