@@ -67,7 +67,8 @@ export class AddressFormComponent implements OnInit {
       }
     );
 
-    this.addressConfirmed = _addressControlService.addressConfirmed$.subscribe(
+    this.addressConfirmed = _addressControlService
+      .addressConfirmed$.subscribe(
       address => {
         this._addressConfirmed = address;
         this.address = this._addressConfirmed;

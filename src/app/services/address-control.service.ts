@@ -25,21 +25,3 @@ export class AddressControlService {
     this.addressConfirmedSource.next(aAddress);
   }
 }
-
-  // private addressAddSource = new Subject<Address>();
-  // private addressAddedSource = new Subject<Address>();
-
-  // // Observable Address streams
-  // addressAdd$ = this.addressAddSource.asObservable();
-  // addressAdded$ = this.addressAddedSource.asObservable();
-
-  // // Service message commands
-  // addressAdd(aAddress: Address) {
-  //   console.log(`AddressControlService ADD ${aAddress.Name}`);
-  //   this.addressAddSource.next(aAddress);
-  // }
-
-  // addressAdded(aAddress: Address) {
-  //   console.log(`AddressControlService ADDED ${aAddress.Name}`);
-  //   this.addressAddedSource.next(aAddress);
-  // }

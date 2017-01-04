@@ -42,12 +42,9 @@ export class AppComponent implements OnInit {
     this._items.push({ label: 'Mission', icon: 'fa-bug', items });
 
 
-        items = [];
+    items = [];
+    items.push({ label: 'DocumentType List', icon: 'fa-bolt', routerLink: ['documenttypelist'] });
     items.push({ label: 'DocumentType Form', icon: 'fa-bolt', routerLink: ['documenttypeform'] });
     this._items.push({ label: 'CCM Demo', icon: 'fa-bug', items });
-
-    
-
-
   }
 }

@@ -4,7 +4,7 @@ import { MissionService } from '../services/mission.service';
 @Component({
   selector: 'dev-mission-control',
   templateUrl: './mission-control.component.html',
-  styleUrls: ['./mission-control.component.css']
+  // styleUrls: ['./mission-control.component.css']
 })
 export class MissionControlComponent implements OnInit {
 

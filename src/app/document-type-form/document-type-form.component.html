@@ -1,3 +1,42 @@
-<p>
-  document-type-form works!
-</p>
+<p-growl [value]="_msgs" [sticky]="_sticky"></p-growl>
+<p-panel header="Details" styleClass="panel-content">
+  <form *ngIf="displayForm" [formGroup]="_documentTypeForm" (ngSubmit)="onSubmit(_documentTypeForm.value)">
+    <div class="ui-grid ui-grid-responsive ui-fluid ui-grid-pad">
+      <div class="ui-grid-row">
+        <div class="ui-grid-col-3">
+          <label>Name:</label>
+        </div>
+        <div class="ui-grid-col-6">
+          <input type="text" pInputText id="Name" formControlName="Name" required>
+        </div>
+        <div *ngIf="formErrors.Name" class="ui-grid-col-6">
+          {{ formErrors.Name }}
+        </div>
+      </div>
+      <div class="ui-grid-row">
+        <div class="ui-grid-col-3">
+          <label>Description:</label>
+        </div>
+        <div class="ui-grid-col-6">
+          <input type="text" pInputText id="Description" formControlName="Description">
+        </div>
+        <div *ngIf="formErrors.Description" class="ui-grid-col-6">
+          {{ formErrors.Description }}
+        </div>
+      </div>
+    </div>
+
+    <div align='right'>
+      <button pButton type="submit" id="btnSave" [disabled]="!_documentTypeForm.valid" label="Save" icon="fa-save"></button>
+      <button pButton type="button" id="btnCopy" (click)="copyDocumentType()" label="Copy" icon="fa fa-files-o" [disabled]="documentType.ID>0?false:true"></button>
+      <button pButton type="button" id="btnDelete" (click)="deleteDocumentType()" [disabled]="documentType.ID>0?false:true" label="Delete"
+        icon="fa-trash-o"></button>
+    </div>
+
+  </form>
+</p-panel>
+
+<h3>Debug</h3>
+<ul>
+  ID:{{documentType.ID}} Name:{{documentType.Name}} Description:{{documentType.Description}} <br/>
+</ul>

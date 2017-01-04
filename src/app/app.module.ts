@@ -23,8 +23,12 @@ import { DatabaseInfoComponent } from './database-info/database-info.component';
 import { CarComponent } from './car/car.component';
 
 import { AddressService } from './services/address.service';
-import { SqlinfoService } from './services/sqlinfo.service';
 import { CarService } from './services/car.service';
+import { DocumentTypeService } from './services/document-type.service';
+import { DocumentTypeControlService } from './services/documenttype-control.service';
+
+import { SqlinfoService } from './services/sqlinfo.service';
+
 import { AddressFormComponent } from './address-form/address-form.component';
 import { AddressListComponent } from './address-list/address-list.component';
 import { MissionControlComponent } from './mission-control/mission-control.component';
@@ -33,6 +37,7 @@ import { AstronautComponent } from './astronaut/astronaut.component';
 import { MissionService } from './services/mission.service';
 import { AddressControlService } from './services/address-control.service';
 import { DocumentTypeFormComponent } from './document-type-form/document-type-form.component';
+import { DocumentTypeListComponent } from './document-type-list/document-type-list.component';
 
 const routes: Routes = [
   {
@@ -58,8 +63,10 @@ const routes: Routes = [
   },
   {
     path: 'documenttypeform', component: DocumentTypeFormComponent
+  },
+  {
+    path: 'documenttypelist', component: DocumentTypeListComponent
   }
-
 ];
 
 @NgModule({
@@ -71,7 +78,8 @@ const routes: Routes = [
     AddressListComponent,
     MissionControlComponent,
     AstronautComponent,
-    DocumentTypeFormComponent
+    DocumentTypeFormComponent,
+    DocumentTypeListComponent
   ],
   imports: [
     AccordionModule,
@@ -85,7 +93,7 @@ const routes: Routes = [
     ReactiveFormsModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [CarService, SqlinfoService,
+  providers: [CarService, DocumentTypeService,DocumentTypeControlService, SqlinfoService,
     AddressService, MissionService, AddressControlService],
   bootstrap: [AppComponent]
 })
