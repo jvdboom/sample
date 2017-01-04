@@ -18,19 +18,21 @@ export class CarComponent implements OnInit {
   constructor(private _carService: CarService) { }
 
   ngOnInit() {
-    this.cars = [];
-    this.cars.push({ vin: '01', year: '1234', brand: '555', color: 'red', price: '10' });
-    this.cars.push({ vin: '02', year: '1234', brand: '555', color: 'red', price: '10' });
-    this.cars.push({ vin: '03', year: '1234', brand: '555', color: 'red', price: '10' });
-    this.cars.push({ vin: '04', year: '1234', brand: '555', color: 'red', price: '10' });
-    this.cars.push({ vin: '05', year: '1234', brand: '555', color: 'red', price: '10' });
-    this.cars.push({ vin: '06', year: '1234', brand: '555', color: 'red', price: '10' });
-    this.cars.push({ vin: '07', year: '1234', brand: '555', color: 'red', price: '10' });
-    this.cars.push({ vin: '08', year: '1234', brand: '555', color: 'red', price: '10' });
-    this.cars.push({ vin: '09', year: '1234', brand: '555', color: 'red', price: '10' });
-    this.cars.push({ vin: '10', year: '1234', brand: '555', color: 'red', price: '10' });
+    // this.cars.push({ vin: '01', year: '1234', brand: '555', color: 'red', price: '10' });
+    // this.cars.push({ vin: '02', year: '1234', brand: '555', color: 'red', price: '10' });
+    // this.cars.push({ vin: '03', year: '1234', brand: '555', color: 'red', price: '10' });
+    // this.cars.push({ vin: '04', year: '1234', brand: '555', color: 'red', price: '10' });
+    // this.cars.push({ vin: '05', year: '1234', brand: '555', color: 'red', price: '10' });
+    // this.cars.push({ vin: '06', year: '1234', brand: '555', color: 'red', price: '10' });
+    // this.cars.push({ vin: '07', year: '1234', brand: '555', color: 'red', price: '10' });
+    // this.cars.push({ vin: '08', year: '1234', brand: '555', color: 'red', price: '10' });
+    // this.cars.push({ vin: '09', year: '1234', brand: '555', color: 'red', price: '10' });
+    // this.cars.push({ vin: '10', year: '1234', brand: '555', color: 'red', price: '10' });
 
-    this._carService.getCarsAll().then(cars => this.cars = cars);
+    this._carService.getCarsAll().then(cars => {
+      this.cars = [];
+      this.cars = cars
+    });
     this.cols = [
       { field: 'vin', header: 'Vin' },
       { field: 'year', header: 'Year' },
@@ -44,7 +46,7 @@ export class CarComponent implements OnInit {
   }
 
   showCar(car: Car) {
-        this.selectedCar = car;
-        this.dialogVisible = true;
-    }
+    this.selectedCar = car;
+    this.dialogVisible = true;
+  }
 }

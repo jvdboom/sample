@@ -1,0 +1,20 @@
+<h2>Mission Control</h2>
+<button pButton type="button" 
+  class="ui-button-warning" 
+  icon="fa-check" 
+  iconPos="left" 
+  label="Announce mission"
+  (click)="announce()">
+</button>
+
+<dev-astronaut 
+  
+  *ngFor="let astronaut of astronauts"
+  [astronaut]="astronaut">
+
+</dev-astronaut>
+
+<h3>History</h3>
+<ul>
+  <li *ngFor="let event of history">{{event}}</li>
+</ul>

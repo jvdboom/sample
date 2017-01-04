@@ -1,0 +1,12 @@
+<p>
+  {{astronaut}}: <strong>{{mission}}</strong>
+  <button pButton 
+    type="button" 
+    class="ui-button-error" 
+    icon="fa-check" 
+    iconPos="left" 
+    label="Confirm"
+    (click)="confirm()"
+    [disabled]="!announced || confirmed">
+  </button>
+</p>

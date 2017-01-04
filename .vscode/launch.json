@@ -1,0 +1,36 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "1 Launch Chrome against localhost, with sourcemaps",
+            "type": "chrome",
+            "request": "launch",
+            "url": "http://localhost:4200",
+            "sourceMaps": true,
+            "webRoot": "${workspaceRoot}"
+        },
+        {
+            "name": "2 Attach to Chrome, with sourcemaps",
+            "type": "chrome",
+            "request": "attach",
+            "port": 9222,
+            "sourceMaps": true,
+            "webRoot": "${workspaceRoot}"
+        },
+        {
+            "name": "3 Canary",
+            "type": "chrome",
+            "request": "launch",
+            "url": "http://localhost:4200/",
+            "sourceMaps": true,
+            "webRoot": "${workspaceRoot}",
+            "runtimeExecutable": "C:\\Users\\BoomJ\\AppData\\Local\\Google\\Chrome SxS\\Application\\chrome.exe",
+            "runtimeArgs": [
+                "--new-window",
+                "--user-data-dir=c:\\temp\\chromeuserdata",
+                "--disable-session-crashed-bubble"
+            ]
+            // "port": 9222
+        }
+    ]
+}

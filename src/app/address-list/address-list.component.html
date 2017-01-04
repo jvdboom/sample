@@ -1,3 +1,24 @@
-<p>
-  address-list works!
-</p>
+<p-growl [value]="msgs" sticky="sticky"></p-growl>
+<p-panel header="Adresses" styleClass="panel-content">
+  <div align='right'>
+    <button pButton type="text" id="btnNew" [disabled]="!_addAddress" (click)="addElement()" label="New">
+    </button>
+  </div>
+  <p-accordion (onClose)="onTabClose($event)" (onOpen)="onTabOpen($event)">
+    <p-accordionTab *ngFor="let count of _addressDummyList;let i=index;" [selected]="_addressList[i].Name == 'Add here.. '">
+      <header>
+        {{_addressList[i].Name}}
+      </header>
+      <dev-address-form id="form1" #form1 
+        (customEvent)="form2.onClick($event)" 
+        [(address)]="_addressList[i]" 
+        (elementDeleted)="onElementDeleted(_addressList[i])"
+        [displayForm]="true">
+      </dev-address-form>
+    </p-accordionTab>
+  </p-accordion>
+</p-panel>
+
+<ul>
+  <li *ngFor="let address of _addresses">{{address}}</li>
+</ul>

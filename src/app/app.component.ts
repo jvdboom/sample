@@ -24,18 +24,23 @@ export class AppComponent implements OnInit {
         label: 'DataBaseInfo',
         icon: 'fa-info-circle',
         routerLink: ['databaseinfo']
-      },
-      {
-        label: 'Car',
-        icon: 'fa-info-circle',
-        routerLink: ['car']
       }
     ];
 
-    const items: MenuItem[] = [];
+    let items: MenuItem[] = [];
     items.push({ label: 'Address List', icon: 'fa-bolt', routerLink: ['addresslist'] });
     items.push({ label: 'Address Form', icon: 'fa-bolt', routerLink: ['addressform'] });
     this._items.push({ label: 'Address', icon: 'fa-bug', items });
+
+    items = [];
+    items.push({ label: 'Car', icon: 'fa-bolt', routerLink: ['car'] });
+    this._items.push({ label: 'Example', icon: 'fa-bug', items });
+
+    items = [];
+    items.push({ label: 'Mission Control', icon: 'fa-bolt', routerLink: ['missioncontrol'] });
+    items.push({ label: 'Astronaut', icon: 'fa-bolt', routerLink: ['astronaut'] });
+    this._items.push({ label: 'Mission', icon: 'fa-bug', items });
+
 
   }
 }
