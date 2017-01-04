@@ -32,6 +32,7 @@ import { AstronautComponent } from './astronaut/astronaut.component';
 
 import { MissionService } from './services/mission.service';
 import { AddressControlService } from './services/address-control.service';
+import { DocumentTypeFormComponent } from './document-type-form/document-type-form.component';
 
 const routes: Routes = [
   {
@@ -54,7 +55,11 @@ const routes: Routes = [
   },
   {
     path: 'astronaut', component: AstronautComponent
+  },
+  {
+    path: 'documenttypeform', component: DocumentTypeFormComponent
   }
+
 ];
 
 @NgModule({
@@ -65,7 +70,8 @@ const routes: Routes = [
     AddressFormComponent,
     AddressListComponent,
     MissionControlComponent,
-    AstronautComponent
+    AstronautComponent,
+    DocumentTypeFormComponent
   ],
   imports: [
     AccordionModule,
