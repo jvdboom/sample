@@ -13,7 +13,8 @@ import { DocumentTypeService } from '../services/document-type.service';
 
 /** ReactiveX */
 import { Subscription } from 'rxjs/Subscription';
-import { DocumentTypeControlService } from '../services/documenttype-control.service'
+import { DocumentTypeControlService } from '../services/documenttype-control.service';
+
 @Component({
   selector: 'dev-document-type-form',
   templateUrl: './document-type-form.component.html',

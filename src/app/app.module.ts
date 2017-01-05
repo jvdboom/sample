@@ -38,6 +38,7 @@ import { MissionService } from './services/mission.service';
 import { AddressControlService } from './services/address-control.service';
 import { DocumentTypeFormComponent } from './document-type-form/document-type-form.component';
 import { DocumentTypeListComponent } from './document-type-list/document-type-list.component';
+import { DocumentTypeFormListComponent } from './document-type-form-list/document-type-form-list.component';
 
 const routes: Routes = [
   {
@@ -66,6 +67,9 @@ const routes: Routes = [
   },
   {
     path: 'documenttypelist', component: DocumentTypeListComponent
+  },
+  {
+    path: 'documenttypeformlist', component: DocumentTypeFormListComponent
   }
 ];
 
@@ -79,7 +83,8 @@ const routes: Routes = [
     MissionControlComponent,
     AstronautComponent,
     DocumentTypeFormComponent,
-    DocumentTypeListComponent
+    DocumentTypeListComponent,
+    DocumentTypeFormListComponent
   ],
   imports: [
     AccordionModule,

@@ -1,0 +1,30 @@
+<div class="ui-g">
+  <!-- Master Section -->
+  <div class="ui-g-6">
+    <p-panel header="Form" styleClass="panel-content">
+      <dev-document-type-form 
+        [(documentType)]="_documentType" 
+        (elementDeleted)="onElementDeleted(_documentType)"
+        [displayForm]="true">
+      </dev-document-type-form>
+    </p-panel>
+  </div>
+  <div class="ui-g-6 ">
+    <p-accordion 
+    (onClose)="onTabClose($event)" 
+    (onOpen)="onTabOpen($event)">
+      <p-accordionTab 
+      *ngFor="let count of _documentTypeDummyList;let i=index;" 
+      [selected]="_documentTypeList[i].Name == 'Add here.. '">
+        <header>
+          {{_documentTypeList[i].Name}}
+        </header>
+        <dev-document-type-form 
+          [(documentType)]="_documentTypeList[i]" 
+          (elementDeleted)="onElementDeleted(_documentTypeList[i])"
+          [displayForm]="true">
+        </dev-document-type-form>
+      </p-accordionTab>
+    </p-accordion>
+  </div>
+</div>

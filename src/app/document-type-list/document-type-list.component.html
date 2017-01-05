@@ -9,7 +9,9 @@
       <header>
         {{_documentTypeList[i].Name}}
       </header>
-      <dev-document-type-form [(documentType)]="_documentTypeList[i]" (elementDeleted)="onElementDeleted(_documentTypeList[i])"
+      <dev-document-type-form 
+        [(documentType)]="_documentTypeList[i]" 
+        (elementDeleted)="onElementDeleted(_documentTypeList[i])"
         [displayForm]="true">
       </dev-document-type-form>
     </p-accordionTab>

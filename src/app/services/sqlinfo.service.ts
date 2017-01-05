@@ -93,3 +93,41 @@ export class SqlinfoService {
     INNER JOIN sys.types TYP
     ON TYP.user_type_id = COL.user_type_id
  */
+
+/**
+ * SELECT 
+SCHEMA_NAME(SCHEMA_ID)					AS [Schema], 
+SO.parent_object_id						AS [ID],
+SO.name									AS [ObjectName],
+SO.Type_Desc							AS [ObjectType],-- (UDF/SP)],
+COALESCE(P.parameter_id,0)				AS [ParameterID],
+COALESCE(P.name, 'NO PARAMETER')		AS [ParameterName],
+COALESCE(TYPE_NAME(P.user_type_id),'')  AS [ParameterDataType],
+COALESCE(P.max_length,0)				AS [ParameterMaxBytes],
+COALESCE(P.is_output,0)					AS [IsOutPutParameter]
+FROM sys.objects AS SO
+LEFT OUTER JOIN sys.parameters AS P 
+ON SO.OBJECT_ID = P.OBJECT_ID
+WHERE SO.OBJECT_ID IN ( SELECT OBJECT_ID 
+FROM sys.objects
+WHERE TYPE IN ('P','FN'))
+-- AND (SO.NAME NOT LIKE 'SP_%' OR SO.NAME NOT LIKE '_%')   --starting with a certain prefix 
+ORDER BY [Schema], SO.name, P.parameter_id
+GO
+
+
+
+
+SELECT o.name AS [Procedure name], * , p.name as [Parameter name] 
+,o.xtype
+FROM sys.parameters p INNER JOIN sysobjects o ON p.object_id = o.id
+WHERE o.xtype = 'P'
+--WHERE o.name LIKE 'prefix%' AND o.xtype = 'P'
+
+
+SELECT name AS [Procedure name], *
+FROM sysobjects  
+ORDER BY Name
+
+ * 
+ */
