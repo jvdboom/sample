@@ -39,6 +39,7 @@ import { AddressControlService } from './services/address-control.service';
 import { DocumentTypeFormComponent } from './document-type-form/document-type-form.component';
 import { DocumentTypeListComponent } from './document-type-list/document-type-list.component';
 import { DocumentTypeFormListComponent } from './document-type-form-list/document-type-form-list.component';
+import { DatabaseStoredProcedureComponent } from './database-stored-procedure/database-stored-procedure.component';
 
 const routes: Routes = [
   {
@@ -46,6 +47,9 @@ const routes: Routes = [
   },
   {
     path: 'databaseinfo', component: DatabaseInfoComponent
+  },
+  {
+    path: 'databasestoredprocedure', component: DatabaseStoredProcedureComponent
   },
   {
     path: 'car', component: CarComponent
@@ -84,7 +88,8 @@ const routes: Routes = [
     AstronautComponent,
     DocumentTypeFormComponent,
     DocumentTypeListComponent,
-    DocumentTypeFormListComponent
+    DocumentTypeFormListComponent,
+    DatabaseStoredProcedureComponent
   ],
   imports: [
     AccordionModule,

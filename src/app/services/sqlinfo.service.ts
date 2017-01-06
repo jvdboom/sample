@@ -1,9 +1,13 @@
 import { Injectable } from '@angular/core';
 import { Headers, Http, Response, URLSearchParams } from '@angular/http';
-import { Table } from '../models/table';
-import { Column } from '../models/column';
+
 import 'rxjs/add/operator/toPromise';
 import { Observable } from 'rxjs/Observable';
+
+import { Table } from '../models/table';
+import { Column } from '../models/column';
+import { StoredProcedure } from '../models/storedprocedure';
+import { Parameter } from '../models/parameter';
 
 
 @Injectable()
@@ -38,6 +42,23 @@ export class SqlinfoService {
 
     getTables(): Promise<Table[]> {
         return this._http.get(`${this._spaUrl}${this._storedProcedure}InfoTableName`)
+            .toPromise()
+            .then(res => res.json())
+            .catch(this.handleError);
+    }
+
+
+    getStoredProcedures(): Promise<StoredProcedure[]> {
+        return this._http.get(`${this._spaUrl}${this._storedProcedure}InfoStoredProcedure`)
+            .toPromise()
+            .then(res => res.json())
+            .catch(this.handleError);
+    }
+
+    getParameters(aStoredProcedure: StoredProcedure): Promise<Parameter[]> {
+        let search = new URLSearchParams();
+        search.set('param1', aStoredProcedure.ObjectName);
+        return this._http.get(`${this._spaUrl}${this._storedProcedure}InfoStoredProcedureParameters?${search.toString()}`)
             .toPromise()
             .then(res => res.json())
             .catch(this.handleError);

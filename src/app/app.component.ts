@@ -21,12 +21,16 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this._items = [
       {
-        label: 'DataBaseInfo',
-        icon: 'fa-info-circle',
-        routerLink: ['databaseinfo']
+        label: 'DataBase',
+        icon: 'fa-database',
+        items: [
+                    { label: 'Table', icon: 'fa-database', routerLink: ['databaseinfo'] },
+                    { label: 'StoredProcedure', icon: 'fa-database', routerLink: ['databasestoredprocedure'] }
+                ]
       }
     ];
 
+    /** EXAMPLE: Two examples of menustructuur */
     let items: MenuItem[] = [];
     items.push({ label: 'Address List', icon: 'fa-bolt', routerLink: ['addresslist'] });
     items.push({ label: 'Address Form', icon: 'fa-bolt', routerLink: ['addressform'] });
