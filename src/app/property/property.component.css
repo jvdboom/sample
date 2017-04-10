@@ -1,0 +1,81 @@
+#btnAddWFUUID {
+    height: 25px;
+    min-width: 35px;
+
+}
+
+#btnAddImage{
+    height: 25px;
+    min-width: 35px;
+}
+
+
+:host >>> .Button{
+    height: 28px;
+}
+
+table{
+    margin-left: -10px;
+    width: 102%;
+}
+
+table tr td{
+    border: none;
+}
+
+
+#cboProcessType{
+    float: left;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+:host >>> .panel-master{
+    height: 100%;
+    margin-left: -10px;
+    margin-right: -10px;
+}
+:host >>> .panel-detail{
+    height: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.ui-g{
+    height: 100%;
+}
+
+
+
+:host >>> .col1{
+    width:250px;
+}
+
+:host >>> .col2{
+    white-space: nowrap;
+}
+:host >>> .col3{
+    width:200px;
+    text-align : center;
+    
+}
+
+:host >>> .col1a{
+    width:200px;
+}
+:host >>> .col2a{
+
+}
+:host >>> .col3a{
+    width:60px;
+}
+
+:host >>> .col1b{
+    width:250px;
+}
+:host >>> .col2b{
+    white-space: nowrap;
+}
+:host >>> .col3b{
+    width:300px;
+}

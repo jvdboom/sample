@@ -15,12 +15,12 @@ export class DocumentTypeControlService {
 
   // Service message commands
   announceDocumentType(aDocumentType: DocumentType) {
-    // console.log(`#####Step 1 announceDocumentType `);
+    console.log(`@Control announce ${aDocumentType.Name}`);
     this.documentTypeAnnouncedSource.next(aDocumentType);
   }
 
   confirmDocumentType(aDocumentType: DocumentType) {
-    // console.log(`CONTROL CONFIRMED CONTROL CONFIRMED CONTROL CONFIRMED CONTROL CONFIRMED`);
+    console.log(`@Control confirm ${aDocumentType.Name}`);
     this.documentTypeConfirmedSource.next(aDocumentType);
   }
 }

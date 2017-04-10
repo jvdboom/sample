@@ -65,7 +65,7 @@ export class DocumentTypeFormComponent implements OnInit {
         if (this.documentType.ID < 0) {
           this.documentType = documentType;
           this.documentType.Description = documentType.Description + ' Confirmed';
-          console.log(`${JSON.stringify(this.documentType)}`);
+          console.log(`DocumentTypeFormComponent: ${JSON.stringify(this.documentType)}`);
           this.buildForm();
         }
       });

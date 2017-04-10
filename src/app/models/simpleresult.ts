@@ -1,4 +1,8 @@
 export class SimpleResult {
-    Key: string;
-    Value: string;
+    constructor(
+        public Key: string,
+        public Value: string,
+    ) { }
 }
+
+

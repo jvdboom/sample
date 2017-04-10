@@ -1,0 +1,89 @@
+<div>
+  total: {{ cTotal }}
+</div>
+
+
+<div>
+  <h2>Wikipedia Search</h2>
+  <input type="text" [formControl]="term">
+  <ul>
+    <li *ngFor="let item of items | async">{{item}}</li>
+  </ul>
+</div>
+
+<div class="ui-g">
+  <div class="ui-g-12">
+    <p-dataTable [value]="cMessages" 
+      [lazy]="true" 
+      [rows]="cLimit" 
+      [paginator]="true"
+      [scrollable]="true"
+      [totalRecords]="cTotal"
+      (onLazyLoad)="loadData($event)">
+      <header> Messages </header>
+      <p-column id="colID" field="ID" header="ID"></p-column>
+      <p-column id="colFileID" field="FileID" header="FileID"></p-column>
+      <p-column id="colMessageTypeID" field="colMessageTypeID" header="MessageTypeID"></p-column>
+      <p-column id="colCurrentMessageStatusID" field="colCurrentMessageStatusID" header="CurrentMessageStatusID"></p-column>
+      <p-column id="colContent" field="Content" header="Content"></p-column>
+    </p-dataTable>
+  </div>
+</div>
+
+<!--
+<p-dataList 
+    [value]="cMessages$ | async" 
+    [paginator]="true" 
+    [rows]="9" 
+    [lazy]="true" 
+    (onLazyLoad)="loadData($event)" 
+    [totalRecords]="cTotal">
+    <template let-car pTemplate="item">
+        Car content
+    </template>
+</p-dataList>-->
+
+<!--<div>
+  <h2>Wikipedia Search OLD</h2>
+  <input #term type="text" (keyup)="searchOLD(term.value)">
+  <ul>
+    <li *ngFor="let item1 of itemsOld">{{item1}}</li>
+  </ul>
+</div>-->
+
+
+<!--<div>
+  <h2>Wikipedia Search</h2>
+  <input type="text" [formControl]="term" />
+  <ul>
+    <li *ngFor="let item of items | async">{{item}}</li>
+  </ul>
+</div>
+
+<h2>Results: {{out | async | json}}</h2>
+
+
+
+cMessages$ : {{ (cMessages$ | async)?.length }}
+<div>
+  <ul>
+    <li *ngFor="let message of cMessages$ | async">
+      {{message.ID}}
+    </li>
+  </ul>
+</div>
+
+
+cMessagesTimed$ : {{ (cMessagesTimed$ | async)?.length }}
+<div>
+  <ul>
+    <li *ngFor="let message of cMessagesTimed$ | async">
+      {{message.ID}}
+    </li>
+  </ul>
+</div>-->
+
+
+<!--<br /> cMessages : {{ (cMessages | async)?.length }}
+<br /> {{ cMessages | async }}
+<br />-->

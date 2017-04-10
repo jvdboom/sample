@@ -1,3 +1,5 @@
+<p-growl [value]="msgs" sticky="sticky"></p-growl>
+<p-messages [value]="msgs"></p-messages>
 
 <div class="ui-g">
     <!-- Master Section -->
@@ -18,7 +20,8 @@
                 <button pButton type="button" (click)="update(_dataTable)" label="Reset"></button>
             </div>
 
-            <p-dataTable #_dataTable [value]="_tables" expandableRows="true" selectionMode="single" 
+            <p-dataTable #_dataTable [value]="_tables" 
+            expandableRows="true" selectionMode="single" 
             (onRowSelect)="handleRowSelect($event)" 
             (onRowExpand)="handleRowExpand($event)">
                 <p-column expander="true" styleClass="col-icon" [style]="{'width':'30px'}" (onRowClick)="onRowClick()"></p-column>
@@ -47,6 +50,7 @@
     </div>
     <div class="ui-g-6 ">
         <p-panel header="Result" styleClass="panel-content">
+<!--
             <div id="content">
                 <div>
                     <button pButton type="button" class="ui-button-secondary" icon="fa-check" iconPos="left" label="secondary"></button>
@@ -57,6 +61,19 @@
                     <button pButton type="button" icon="fa-check" iconPos="left" label="CSS"></button>
                 </div>
             </div>
+-->
+            <div id="content">
+                <div>
+                    <button type="button" icon="fa-check" iconPos="left" pButton (click)="clear()"          label="secondary" class="ui-button-secondary"></button>
+                    <button type="button" icon="fa-check" iconPos="left" pButton (click)="showSuccess()"    label="Success" class="ui-button-success"></button>
+                    <button type="button" icon="fa-check" iconPos="left" pButton (click)="showInfo()"       label="Info" class="ui-button-info"></button>
+                    <button type="button" icon="fa-check" iconPos="left" pButton (click)="showWarn()"       label="Warn" class="ui-button-warning"></button>
+                    <button type="button" icon="fa-check" iconPos="left" pButton (click)="showError()"      label="Error" class="ui-button-error"></button>
+                    <button type="button" icon="fa-check" iconPos="left" pButton (click)="showMultiple()"   label="Multiple"></button>
+                    <button type="button" icon="fa-check" iconPos="left" pButton (click)="clear()"          label="Clear" icon="fa-close" style="float:right"></button>                    
+                </div>
+            </div>
+            
             <div>
                 <pre>{{_data | json}}</pre>
             </div>

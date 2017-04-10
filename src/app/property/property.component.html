@@ -1,0 +1,33 @@
+<p-growl [value]="_msgs" sticky="_sticky"></p-growl>
+<!--<p-messages [value]="_msgs" sticky="_sticky"></p-messages>-->
+
+<p-dataTable [value]="properties" [(selection)]="selectedProperty">
+  <header>Properties</header>
+  <p-column [style]="{'width':'38px'}" selectionMode="multiple"></p-column>
+  <p-column field="Name" header="Name"></p-column>
+  <p-column field="Element" header="Element"></p-column>
+  <footer>
+    <form [formGroup]="_propertyForm" (ngSubmit)="onSubmit()">
+      <table >
+        <tr>
+          <td class="col1a"><input type="text" pInputText formControlName="Name"    placeholder="Name" style="width:95%;" /></td>
+          <td class="col2a"><input type="text" pInputText formControlName="Element" placeholder="Description" style="width:100%;"  /></td>
+          <td class="col3a">
+            <button pButton id="btnSave" class="Button" [disabled]="!_propertyForm.valid" type="submit" icon="fa-plus">
+            </button>
+          </td>          
+        </tr>
+        <tr>
+          <td *ngIf="formErrors.Name || formErrors.Element"  colspan="2">
+            {{ formErrors.Name }} {{ formErrors.Element }}
+          </td>
+        </tr>
+      </table>
+    </form>
+    <ul>
+      <li *ngFor="let prop of selectedProperty" style="text-align: left"> {{prop.Name + ' - ' + prop.Element}}</li>
+      <div *ngIf="formErrors.Name || formErrors.Element" class="ui-grid-col-4">
+			</div>
+</ul>
+</footer>
+</p-dataTable>

@@ -5,6 +5,9 @@ import { DocumentTypeListComponent } from '../document-type-list/document-type-l
 import { DocumentTypeService } from '../services/document-type.service';
 import { DocumentTypeControlService } from '../services/documenttype-control.service';
 
+/** PrimeNG */
+import { Message, SelectItem, DataTable } from 'primeng/primeng';
+
 @Component({
   selector: 'dev-document-type-form-list',
   templateUrl: './document-type-form-list.component.html',
@@ -18,6 +21,9 @@ export class DocumentTypeFormListComponent implements OnInit {
   private _documentTypes: string[];
   private _documentType: DocumentType;
   private _documentTypeDummyList: number[];
+
+  private _msgs: Message[] = [];
+  private _sticky: boolean;
 
   constructor(private _documentTypeService: DocumentTypeService,
     _documentTypeControlService: DocumentTypeControlService) {
@@ -53,11 +59,17 @@ export class DocumentTypeFormListComponent implements OnInit {
   }
 
   onTabClose(event) {
-
+    console.log(`open ${JSON.stringify(event)}`);
+    this._sticky = false;
+    this._msgs = [];
+    this._msgs.push({ severity: 'info', summary: 'Tab Closed', detail: 'Index: ' + event.index });
   }
 
   onTabOpen(event) {
-
+    console.log(`open ${JSON.stringify(event)}`);
+    this._sticky = false;
+    this._msgs = [];
+    this._msgs.push({ severity: 'info', summary: 'Tab Expanded', detail: 'Index: ' + event.index });
   }
 
   onElementDeleted(aDocumentType: DocumentType) {

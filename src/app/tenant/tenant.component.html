@@ -1,0 +1,78 @@
+<p>
+  tenant works!
+</p>
+
+<input type="text" placeholder="Add Tenant" (keyup.enter)="saveTenant(input.value)" #input> {{(tenants$ | async)?.length}}
+<br>
+<button (click)="consecutiveReqs()">Delete (Reload)</button>
+<button (click)="requestChain()">Request Chain</button>
+<button (click)="parallelRequest()">Parallel Request</button>
+<button (click)="reload()">Reload</button>
+<button (click)="cancel()">Cancel</button>
+<button (click)="countMessage()">Count Message</button>
+
+<br>
+<input type="text" id="txtSearch" placeholder="Search" (keyup.enter)="searchTenant(search.value)" #search>
+<br>
+
+<br>
+<div>
+  simpleResult$.Value{{simpleResult$.Value | async}}
+</div>
+
+<br>
+<div>
+  simpleResult${{simpleResult$ | async}}
+
+</div>
+
+<br>
+<div>
+  loadSimpleResult${{loadSimpleResult$ | async}}
+</div>
+<br>
+<div>
+  RES2 {{RES2}}
+</div>
+
+<div>
+  total {{total}}
+</div>
+
+<ul>
+  <li *ngFor="let post of RES ">
+    <span>RES {{post.Value}}</span>
+  </li>
+</ul>
+
+<!--<div>
+  loadSimpleResult$[0] {{loadSimpleResult$[0]?.Value | async}}
+</div>-->
+
+<div>
+  <ul>
+    <li *ngFor="let tenant of tenants$ | async">
+      {{tenant.Name}}: {{tenant.CustomerNumber}}
+    </li>
+  </ul>
+</div>
+<br>
+
+<br>
+<div>
+  {{tenAB$ | async}}
+</div>
+
+<div>
+  <ul>
+    <li *ngFor="let rec of recent">
+      {{rec.properties.title}}
+    </li>
+  </ul>
+</div>
+
+<!--
+<div> 
+  {{atenants}}
+</div>
+-->

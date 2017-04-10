@@ -16,12 +16,12 @@ export class AddressControlService {
 
   // Service message commands
   announceAddress(aAddress: Address) {
-    console.log(`@Step 1 AddressControlService announceAddress ${aAddress.Name}`);
+    console.log(`@Control 1 Address announce ${aAddress.Name}`);
     this.addressAnnouncedSource.next(aAddress);
   }
 
   confirmAddress(aAddress: Address) {
-    console.log(`@Step 2 AddressControlService confirmAddress ${aAddress.Name}`);
+    console.log(`@Control 2 Address confirm ${aAddress.Name}`);
     this.addressConfirmedSource.next(aAddress);
   }
 }

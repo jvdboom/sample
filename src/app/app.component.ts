@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { MenubarModule, MenuItem } from 'primeng/primeng';
 
 import 'rxjs/add/operator/toPromise';
+// import "rxjs/Rx";
 
 @Component({
   // moduleId: module.id,
@@ -24,14 +25,15 @@ export class AppComponent implements OnInit {
         label: 'DataBase',
         icon: 'fa-database',
         items: [
-                    { label: 'Table', icon: 'fa-database', routerLink: ['databaseinfo'] },
-                    { label: 'StoredProcedure', icon: 'fa-database', routerLink: ['databasestoredprocedure'] }
-                ]
+          { label: 'Table', icon: 'fa-database', routerLink: ['databaseinfo'] },
+          { label: 'StoredProcedure', icon: 'fa-database', routerLink: ['databasestoredprocedure'] }
+        ]
       }
     ];
 
     /** EXAMPLE: Two examples of menustructuur */
     let items: MenuItem[] = [];
+    items.push({ label: 'Property', icon: 'fa-bolt', routerLink: ['property'] });
     items.push({ label: 'Address List', icon: 'fa-bolt', routerLink: ['addresslist'] });
     items.push({ label: 'Address Form', icon: 'fa-bolt', routerLink: ['addressform'] });
     this._items.push({ label: 'Address', icon: 'fa-bug', items });
@@ -51,5 +53,18 @@ export class AppComponent implements OnInit {
     items.push({ label: 'DocumentType List', icon: 'fa-bolt', routerLink: ['documenttypelist'] });
     items.push({ label: 'DocumentType Form', icon: 'fa-bolt', routerLink: ['documenttypeform'] });
     this._items.push({ label: 'CCM Demo', icon: 'fa-bug', items });
+
+    items = [];
+    items.push({ label: 'tenant', icon: 'fa-bolt', routerLink: ['tenant'] });
+    this._items.push({ label: 'Tenant Demo', icon: 'fa-bug', items });
+
+    items = [];
+    items.push({ label: 'message', icon: 'fa-bolt', routerLink: ['message'] });
+    this._items.push({ label: 'Message Demo', icon: 'fa-bug', items });
+
+    items = [];
+    items.push({ label: 'PostList', icon: 'fa-bolt', routerLink: ['postlist'] });
+    this._items.push({ label: 'PostList Demo', icon: 'fa-bug', items });
+
   }
 }
